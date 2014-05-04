@@ -15,14 +15,89 @@
                     <view key="view" contentMode="scaleToFill" id="gEi-Ug-qaA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llc-zy-o10">
+                                <rect key="frame" x="15" y="503" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="button_black.png"/>
+                                <state key="selected" backgroundImage="button_black_selected.png"/>
+                                <connections>
+                                    <action selector="select_color:" destination="4Ze-MQ-qGX" eventType="touchUpInside" id="1PX-Gb-tqp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbK-KF-HVL">
+                                <rect key="frame" x="75" y="503" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_purple.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="button_purple_selected.png"/>
+                                <connections>
+                                    <action selector="select_color:" destination="4Ze-MQ-qGX" eventType="touchUpInside" id="XfA-QT-Lbc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ym4-Ba-002">
+                                <rect key="frame" x="135" y="503" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_green.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="button_green_selected.png"/>
+                                <connections>
+                                    <action selector="select_color:" destination="4Ze-MQ-qGX" eventType="touchUpInside" id="1Ci-9w-Alp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZS-pg-T5L">
+                                <rect key="frame" x="195" y="503" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_blue.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="button_blue_selected.png"/>
+                                <connections>
+                                    <action selector="select_color:" destination="4Ze-MQ-qGX" eventType="touchUpInside" id="Osl-JH-YgH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsu-Km-rJl">
+                                <rect key="frame" x="255" y="503" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_white.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" backgroundImage="button_white_selected.png"/>
+                                <connections>
+                                    <action selector="select_color:" destination="4Ze-MQ-qGX" eventType="touchUpInside" id="dEb-AM-ehe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="black_button" destination="Llc-zy-o10" id="4Kw-h8-HbO"/>
+                        <outlet property="blue_button" destination="wZS-pg-T5L" id="jil-jh-hYk"/>
+                        <outlet property="green_button" destination="Ym4-Ba-002" id="d8W-MZ-W79"/>
+                        <outlet property="purple_button" destination="vbK-KF-HVL" id="9Ve-Jz-JaI"/>
+                        <outlet property="white_button" destination="Jsu-Km-rJl" id="cGx-bz-ldD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdu-a1-e5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="178" y="94"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_black.png" width="100" height="100"/>
+        <image name="button_black_selected.png" width="100" height="100"/>
+        <image name="button_blue.png" width="100" height="100"/>
+        <image name="button_blue_selected.png" width="100" height="100"/>
+        <image name="button_green.png" width="100" height="100"/>
+        <image name="button_green_selected.png" width="100" height="100"/>
+        <image name="button_purple.png" width="100" height="100"/>
+        <image name="button_purple_selected.png" width="100" height="100"/>
+        <image name="button_white.png" width="100" height="100"/>
+        <image name="button_white_selected.png" width="100" height="100"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
