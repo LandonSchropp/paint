@@ -15,7 +15,7 @@ describe AppDelegate do
     end
 
     it "sets the root view controller" do
-      @application.windows.first.rootViewController.should.be.instance_of UIViewController
+      @application.windows.first.rootViewController.should.be.instance_of PaintingController
     end
   end
 end
