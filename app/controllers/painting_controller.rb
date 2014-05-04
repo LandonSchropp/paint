@@ -1,0 +1,2 @@
+class PaintingController < UIViewController
+end
