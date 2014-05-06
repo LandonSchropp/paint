@@ -9,6 +9,7 @@ rescue LoadError
 end
 
 require "sugarcube-color"
+require "motion-facon"
 
 Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings.

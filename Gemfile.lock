@@ -10,6 +10,7 @@ GEM
       thor (>= 0.15.4)
       tilt (>= 1.4.1)
       xcodeproj (>= 0.11.1)
+    motion-facon (0.5.0.1)
     multi_json (1.9.3)
     rake (10.3.1)
     sugarcube (1.4.6)
@@ -25,5 +26,6 @@ PLATFORMS
 
 DEPENDENCIES
   ib
+  motion-facon
   rake
   sugarcube
