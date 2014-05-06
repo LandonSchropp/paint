@@ -12,6 +12,7 @@ require "sugarcube-color"
 require "motion-facon"
 
 Motion::Project::App.setup do |app|
-  # Use `rake config' to see complete project settings.
-  app.name = 'paint'
+  app.name = 'Paint'
+  app.info_plist['UIStatusBarHidden'] = true
+  app.info_plist['UIViewControllerBasedStatusBarAppearance'] = false
 end
