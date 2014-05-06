@@ -59,4 +59,10 @@ describe PaintingController do
       controller.selected_color.should == PaintingController::COLORS[2]
     end
   end
+
+  describe "#painting_view" do
+    it "is connected in the storyboard" do
+      controller.painting_view.should.not.be.nil
+    end
+  end
 end

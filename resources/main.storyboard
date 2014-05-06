@@ -16,6 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPJ-MO-ZFu" customClass="PaintingView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llc-zy-o10">
                                 <rect key="frame" x="15" y="503" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -77,6 +82,7 @@
                         <outlet property="black_button" destination="Llc-zy-o10" id="4Kw-h8-HbO"/>
                         <outlet property="blue_button" destination="wZS-pg-T5L" id="jil-jh-hYk"/>
                         <outlet property="green_button" destination="Ym4-Ba-002" id="d8W-MZ-W79"/>
+                        <outlet property="painting_view" destination="vPJ-MO-ZFu" id="HGD-Dn-wmN"/>
                         <outlet property="purple_button" destination="vbK-KF-HVL" id="9Ve-Jz-JaI"/>
                         <outlet property="white_button" destination="Jsu-Km-rJl" id="cGx-bz-ldD"/>
                     </connections>

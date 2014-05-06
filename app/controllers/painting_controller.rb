@@ -6,6 +6,7 @@ class PaintingController < UIViewController
   outlet :green_button
   outlet :blue_button
   outlet :white_button
+  outlet :painting_view
 
   COLORS = [
     "#333333".uicolor,
