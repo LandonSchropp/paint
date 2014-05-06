@@ -15,4 +15,5 @@ Motion::Project::App.setup do |app|
   app.name = 'Paint'
   app.info_plist['UIStatusBarHidden'] = true
   app.info_plist['UIViewControllerBasedStatusBarAppearance'] = false
+  app.icons = [ "icon.png" ]
 end
