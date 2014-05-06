@@ -1,11 +1,18 @@
 class PaintingView < UIView
-  attr_accessor :stroke
+  attr_accessor :painting
 
   def drawRect(rectangle)
     super
 
-    # ensure the stroke is provided
-    return if stroke.nil?
+    # ensure the painting is provided
+    return if painting.nil?
+
+    painting.strokes.each do |stroke|
+      draw_stroke(stroke)
+    end
+  end
+
+  def draw_stroke(stroke)
 
     # set up the drawing context
     context = UIGraphicsGetCurrentContext()
