@@ -1,6 +1,8 @@
 class PaintingController < UIViewController
   extend IB
 
+  attr_reader :painting
+
   outlet :black_button
   outlet :purple_button
   outlet :green_button
@@ -27,6 +29,11 @@ class PaintingController < UIViewController
 
   def selected_color
     COLORS[buttons.find_index { |button| button.state == UIControlStateSelected }]
+  end
+
+  def viewDidLoad
+    @painting = Painting.new
+    painting_view.painting = painting
   end
 
   private

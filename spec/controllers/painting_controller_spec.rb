@@ -65,4 +65,15 @@ describe PaintingController do
       controller.painting_view.should.not.be.nil
     end
   end
+
+  describe "#viewDidLoad" do
+
+    it "sets the painting" do
+      controller.painting.should.be.instance_of Painting
+    end
+
+    it "sets the painting attribute of the painting view" do
+      controller.painting_view.painting.should == controller.painting
+    end
+  end
 end
