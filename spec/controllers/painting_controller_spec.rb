@@ -76,4 +76,33 @@ describe PaintingController do
       controller.painting_view.painting.should == controller.painting
     end
   end
+
+  describe "#stroke_gesture_changed" do
+
+    before do
+      drag(controller.painting_view, :points => [ CGPoint.new(100, 100), CGPoint.new(150, 150), CGPoint.new(200, 200) ])
+    end
+
+    it "adds the points to the stroke" do
+      controller.painting.strokes.first.points[0].should == CGPoint.new(100, 100)
+      controller.painting.strokes.first.points[1].should == CGPoint.new(150, 150)
+      controller.painting.strokes.first.points[2].should == CGPoint.new(200, 200)
+    end
+
+    it "sets the stroke's color to the selected color" do
+      controller.painting.strokes.first.color.should == controller.selected_color
+    end
+  end
+
+  describe "#painting_view" do
+
+    it "is connected in the storyboard" do
+      controller.painting_view.should.not.be.nil
+    end
+
+    it "has a stroke gesture recognizer" do
+      controller.painting_view.gestureRecognizers.length.should == 1
+      controller.painting_view.gestureRecognizers[0].should.be.instance_of StrokeGestureRecognizer
+    end
+  end
 end

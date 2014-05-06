@@ -36,6 +36,17 @@ class PaintingController < UIViewController
     painting_view.painting = painting
   end
 
+  def stroke_gesture_changed(stroke_gesture_recognizer)
+
+    if stroke_gesture_recognizer.state == UIGestureRecognizerStateBegan
+      painting.start_stroke(stroke_gesture_recognizer.position, selected_color)
+    else
+      painting.continue_stroke(stroke_gesture_recognizer.position)
+    end
+
+    painting_view.setNeedsDisplay
+  end
+
   private
 
   def buttons

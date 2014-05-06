@@ -20,6 +20,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="r8K-Ls-guK" id="8XK-Tr-CWN"/>
+                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Llc-zy-o10">
                                 <rect key="frame" x="15" y="503" width="50" height="50"/>
@@ -88,6 +91,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdu-a1-e5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="r8K-Ls-guK" customClass="StrokeGestureRecognizer">
+                    <connections>
+                        <action selector="stroke_gesture_changed:" destination="4Ze-MQ-qGX" id="xl1-Tf-EEf"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="178" y="94"/>
         </scene>
